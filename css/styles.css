@@ -12,18 +12,20 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+
 }
 
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
+
 :root {
     --color-accent: #4d1979;
     --color-accent-strong: #321052;
     --color-text: #172033;
     --color-muted: #657186;
-    --color-border: #d9dfeb;
-    --color-bg: #f7f8fb;
+    --color-border: #000a1e;
+    --color-bg: #1f3b8e;
     --color-surface: #ffffff;
     --color-surface-alt: #f1f5f9;
     --color-danger: #b42318;
@@ -48,6 +50,8 @@ img {
 /* ==========================
    3. BASE
    ========================== */
+
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -98,6 +102,7 @@ a:focus-visible {
 /* ==========================
    4. LAYOUT
    ========================== */
+   
 main {
     display: block;
 }
@@ -138,9 +143,9 @@ textarea {
     width: 100%;
     font: inherit;
     margin-bottom: var(--space-md);
-    padding: 0.7rem 0.75rem;
+    padding: var(--space-sm);
     border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     background: var(--color-surface);
     color: var(--color-text);
 }
@@ -154,13 +159,26 @@ textarea {
    ========================== */
 button {
     font: inherit;
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-strong);
 }
 
 .btn-danger {
     background-color: var(--color-danger);
     color: var(--color-surface);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     padding: 0.6rem 1rem;
     cursor: pointer;
     margin-top: var(--space-md);
@@ -209,4 +227,5 @@ footer {
     .favorites-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+
 }
