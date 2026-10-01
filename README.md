@@ -11,3 +11,4 @@ The Live URL deploy this project on GitHub Pages and add the URL here after publ
 
 ## Notes
 The app stores favorites in the browser, allowing for recall and to come back for certain entries wtihout worry of a reset memory.
+ 
